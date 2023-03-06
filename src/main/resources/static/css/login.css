@@ -1,0 +1,109 @@
+@import url(reset.css);
+
+body {
+  background-color: aquamarine;
+}
+
+.login_out_box {
+  position: absolute;
+}
+
+.login_in_box_out {
+  width: 400px;
+  /* border: 1px solid red; */
+  position: relative;
+  padding: 80px 0px 0 44px;
+}
+.login_in_box {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* 로그인 인풋 text */
+.login_table {
+  position: relative;
+  /* margin-top: -500px; */
+}
+.login_inout_text1 {
+  font-size: 17px;
+  font-family: "Nanum Myeongjo", serif;
+  color: #3b5835;
+
+  width: 290px;
+  height: 47px;
+
+  position: relative;
+  top: -393px;
+
+  border: none;
+  background: transparent;
+}
+
+.login_inout_text1:focus {
+  outline: none;
+}
+
+.login_inout_text2 {
+  font-size: 17px;
+  font-family: "Nanum Myeongjo", serif;
+  color: #3b5835;
+
+  width: 290px;
+  height: 47px;
+
+  position: relative;
+  top: -843px;
+
+  border: none;
+  background: transparent;
+}
+
+.login_inout_text2:focus {
+  outline: none;
+}
+
+/* 로그인 버튼 */
+.login_button_a {
+  width: 400px;
+  margin: 0px auto;
+  position: relative;
+
+  top: -815px;
+}
+.login_button_c {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.login_button_c {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+.login_button_a:hover .login_button_c {
+  display: block;
+}
+
+/* 로그인창 */
+#login_box_close {
+  border: 1px solid red;
+  z-index: 3;
+
+  position: absolute;
+
+  top: -300px;
+}
+
+/* 로그인창 close */
+.login_box_close {
+  border: 1px solid red;
+  width: 20px;
+  height: 20px;
+
+  position: relative;
+  margin: auto;
+  z-index: 4;
+  cursor: pointer;
+}

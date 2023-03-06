@@ -1,0 +1,144 @@
+@import url(reset.css);
+
+body {
+  background-color: #f5f5f4;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 15px;
+  line-height: 21px;
+  color: #7f7f7f;
+}
+
+div {
+  box-sizing: border-box;
+  /* border: 1px solid rebeccapurple; */
+}
+
+.in_main_out {
+  /* 부모 그리드 */
+  display: grid;
+  grid-template-areas:
+    "in_main_bigimg in_main_bigimg in_main_bigimg"
+    "in_main_none1 in_main_text in_main_none2"
+    "in_main_none1 in_main_3_img in_main_none2"
+    "in_main_none1 in_main_logo in_main_none2"
+    "in_main_none1 in_main_smalimg in_main_none2";
+
+  grid-template-columns: 1fr 980px 1fr;
+  grid-template-rows: 513px 190px 310px 250px 800px;
+}
+
+.in_main_out > div {
+  /* 부모 밑의 자식그리드 정렬방식 */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 최상단 큰이미지 */
+
+.slide {
+  overflow: hid den;
+  position: relative;
+  /* top: -270px;
+  left: -580px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide > div {
+  position: absolute;
+
+  /* height: 100%; */
+}
+
+.in_main_bigimg {
+  width: 980px 513px;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  object-fit: cover;
+
+  grid-area: in_main_bigimg;
+  /* background-color: #3b5835; */
+}
+
+.in_main_none1 {
+  grid-area: in_main_none1;
+}
+
+/* 차 한잔은 */
+.in_main_text {
+  grid-area: in_main_text;
+  background-color: #fff;
+  text-align: center;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 15px;
+  line-height: 21px;
+  color: #7f7f7f;
+}
+.in_main_none2 {
+  grid-area: in_main_none2;
+}
+.in_main_3_img {
+  grid-area: in_main_3_img;
+}
+.in_main_logo {
+  grid-area: in_main_logo;
+}
+.in_main_smalimg {
+  grid-area: in_main_smalimg;
+}
+
+/* 사진 3개 */
+.in_main_3_img {
+  background-color: #fff;
+}
+
+/* 중간이미지 3개 씩 슬라이드 */
+.cd1 {
+  width: 975px;
+  height: 300px;
+
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+
+  /* border: 2px solid red; */
+}
+
+.cd1 ul {
+  width: 1950px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0;
+}
+
+.cd1 li {
+  display: inline-block;
+}
+
+#back {
+  position: absolute;
+  top: 130px;
+  left: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+#next {
+  position: absolute;
+  top: 130px;
+  right: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* 본문로고 */
+.in_main_logo {
+  background-color: #fff;
+}
+
+/* 최하단 큰이미지 */
+.in_main_smalimg {
+  background-color: #fff;
+}

@@ -1,0 +1,117 @@
+@import url(reset.css);
+
+.sub_main_outbox {
+  display: grid;
+  grid-template-areas: "sub_main_x1 sub_main sub_main_x2";
+  grid-template-columns: 1fr 980px 1fr;
+  grid-template-rows: 600px;
+
+  background-image: url("../img/sub1_main_back.jpg");
+  background-size: cover;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 16px;
+  color: #3b5835;
+  font-weight: 600;
+}
+
+.sub_main_outbox > div {
+  justify-content: center;
+  align-items: center;
+}
+
+/* 공란 */
+.sub_main_x1 {
+  grid-area: sub_main_x1;
+}
+
+/* 중앙 */
+.sub_main {
+  grid-area: sub_main;
+  position: relative;
+  z-index: 1;
+}
+.sub_main:after {
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  opacity: 0.85 !important;
+  filter: alpha(opacity=85);
+  position: absolute;
+  /* background-size: 100%; */
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
+/* 공란 */
+.sub_main_x2 {
+  grid-area: sub_main_x2;
+}
+
+div,
+table,
+tr,
+td {
+  /* border: 1px solid rebeccapurple; */
+}
+
+.s1_main_table1 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+/* 최상단 녹차 백차~~ */
+.top_menu > li {
+  display: inline-block;
+  margin: 30px 20px 25px 20px;
+  height: 20px;
+
+  /* border: 1px solid rebeccapurple; */
+}
+.top_menu_hover:hover {
+  color: #868985;
+  border-bottom: 2px solid #868985;
+}
+
+/* 판매사진 3개 오버 */
+.sub_m_hover_a {
+  position: relative;
+  cursor: pointer;
+}
+.sub_m_hover_b {
+  position: absolute;
+}
+
+.sub_m_hover_a:hover {
+  opacity: 0;
+}
+
+/* 사진 밑에 설명 */
+.bottom_ment {
+  height: 90px;
+}
+.bottom_ment > li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.bottom_ment_a {
+  font-size: 19px;
+}
+.bottom_ment_b {
+  font-size: 15px;
+  font-weight: 200;
+}
+.bottom_ment_c {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.corsor {
+  cursor: pointer;
+}
+
+.bottom_ment > li > a {
+  color: #3b5835;
+}

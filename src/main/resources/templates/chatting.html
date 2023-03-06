@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" type="text/css" href="../static/css/chatting.css">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Cute+Font&family=Do+Hyeon&family=Dokdo&family=East+Sea+Dokdo&family=Gaegu&family=Gamja+Flower&family=Gothic+A1&family=Gugi&family=Hi+Melody&family=Jua&family=Kirang+Haerang&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR&family=Noto+Serif+KR&family=Poor+Story&family=Single+Day&family=Song+Myung&family=Stylish&family=Sunflower:wght@300&family=Yeon+Sung&display=swap"
+      rel="stylesheet">
+
+
+   <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+      crossorigin="anonymous"></script>
+   <script>
+
+      function updateScroll() {
+         var element = document.getElementById("topbox");
+         element.scrollTop = element.scrollHeight;
+      }
+
+      $(function () {
+
+
+         $("#send").on("click", function () {
+
+            var msg = $("#input").val();
+
+            var tr = $("<tr></tr>");
+            tr.append("<td>" + msg);
+            $("#box").append(tr);
+            $("#input").val("");
+
+            var maxScroll = $("#box").height() - $("#topbox").height();
+            $("#topbox").scrollTop(maxScroll);
+            updateScroll();
+         })
+
+         $("#input").on("keyup", function (e) {
+            if (e.keyCode == 13) {
+               var msg = $("#input").val();
+               var tr = $("<tr></tr>");
+               tr.append("<td>" + msg);
+               $("#box").append(tr);
+               $("#input").val("");
+
+               updateScroll();
+            }
+         })
+
+      })
+   </script>
+
+</head>
+
+<body>
+   <img src="../static/img/chatting_box.png">
+   <div class="cha_outbox">
+
+      <div id=topbox>
+         <!-- 차차프로필 -->
+         <div>
+            <img id="cha_p" src="../static/img/chatting_icon.png">
+         </div>
+
+         <table id="box"></table>
+
+      </div>
+
+      <div id="bottombox">
+         <input type="text" id="input" placeholder="메시지를 입력해주세요">
+         <input type="button" value="send" id="send">
+      </div>
+   </div>
+
+
+
+</body>
+
+</html>

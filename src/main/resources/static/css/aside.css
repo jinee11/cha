@@ -1,0 +1,63 @@
+@import url(reset.css);
+
+div {
+  /* border: 1px solid red; */
+}
+
+.aside_outbox {
+  width: 300px;
+  height: 100vh;
+  background-color: #8cb082;
+  display: grid;
+  grid-template-columns: 300px;
+
+  grid-template-rows: 100px 80px 180px 1fr;
+  grid-template-areas: "as_x" "as_logo" "as_menu" "as_x2";
+
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 15px;
+  color: #f5f5f4;
+}
+
+.as_x {
+  grid-area: as_x;
+}
+.as_logo {
+  grid-area: as_logo;
+}
+.as_menu {
+  grid-area: as_menu;
+}
+
+.aside_outbox > div {
+  /* 각 div안을 중앙정렬하는 코드*/
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+/* 메뉴 메인ul */
+.as_main {
+  position: relative;
+  text-align: center;
+  line-height: 40px;
+}
+
+.as_main > li {
+  /* border: 1px solid red; */
+  width: 120px;
+  height: 40px;
+}
+
+.as_main > li:hover {
+  color: #3b5835;
+  cursor: pointer;
+}
+
+.as_main > li > a {
+  color: #f5f5f4;
+}
+
+.as_main > li > a:hover {
+  color: #3b5835;
+}

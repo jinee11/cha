@@ -1,0 +1,46 @@
+@import url(reset.css);
+
+body {
+  /* background-color: aquamarine; */
+}
+
+.join_out_box {
+  position: absolute;
+}
+
+.join_in_box_out {
+  width: 400px;
+  /* border: 1px solid red; */
+  position: relative;
+  padding: 80px 0px 0 44px;
+}
+.join_in_box {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.join_in_box1 {
+  margin-top: 50px;
+}
+
+/* 회원가입창 */
+#join_box_close {
+  border: 1px solid red;
+  z-index: 3;
+
+  position: absolute;
+
+  top: -300px;
+}
+
+/* 회원가입 창 close */
+.join_box_close {
+  border: 1px solid red;
+  width: 20px;
+  height: 20px;
+
+  position: relative;
+  margin: auto;
+  z-index: 4;
+  cursor: pointer;
+}

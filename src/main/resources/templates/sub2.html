@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" type="text/css" href="../static/css/sub2.css">
+   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+   <script type="text/javascript">
+      $(document).ready(function () {
+
+         $("#headers").load("header.html");  // 원하는 파일 경로를 삽입하면 된다
+         $("#sub2_main").load("sub2_main.html");  // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+         $("#footer").load("footer.html");  // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+
+      });
+
+   </script>
+
+
+
+
+</head>
+
+<body>
+   <div id="headers"></div>
+   <div id="sub2_main"></div>
+   <div id="footer"></div>
+
+
+
+
+
+
+
+   <!-- <div class="wrap">
+   </div> -->
+
+</body>
+
+</html>

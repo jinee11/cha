@@ -1,0 +1,71 @@
+@import url(reset.css);
+
+body {
+  /* background-color: aquamarine; */
+}
+
+.join_box_out {
+  /* border: 1px solid red; */
+  position: absolute;
+  margin-top: 0;
+}
+
+/* 가입창 전부를 감는 박스 */
+.join_box_in {
+  width: 380px;
+  height: 610px;
+  /* border: 1px solid red; */
+
+  position: absolute;
+  margin-top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 17px;
+  font-weight: 600;
+  font-family: "Nanum Myeongjo", serif;
+  color: #3b5835;
+}
+
+/* 프로필사진 */
+.join_f {
+  /* border: 1px solid red; */
+  width: 100px;
+  height: 90px;
+  position: relative;
+  left: 110px;
+}
+
+/* 이메일 비밀번호 비밀번호확인 */
+.join_text_1 {
+  /* border: 1px solid red; */
+  width: 310px;
+
+  margin-top: 90px;
+}
+.join_inout_text {
+  font-size: 17px;
+  font-family: "Nanum Myeongjo", serif;
+  color: #3b5835;
+
+  width: 290px;
+  height: 47px;
+
+  border: none;
+  background: transparent;
+}
+
+.join_inout_text:focus {
+  outline: none;
+}
+
+/* 가입하기 버튼 */
+.join_button {
+  /* border: 1px solid red; */
+  width: 310px;
+
+  position: relative;
+  top: 35px;
+}

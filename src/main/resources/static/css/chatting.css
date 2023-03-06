@@ -1,0 +1,97 @@
+@import url(reset.css);
+
+@font-face {
+  font-family: "twayair";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+div {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+}
+
+/* 채팅박스 */
+.cha_outbox {
+  /* border: 1px solid black; */
+  width: 360px;
+  height: 515px;
+  margin-top: 85px;
+  position: absolute;
+  top: 0;
+  font-family: "twayair";
+  font-size: 18px;
+}
+
+/* 차차프로필 */
+#cha_p {
+  /* position: absolute; */
+  margin: 10px 0 10px 10px;
+}
+
+#bottombox {
+  position: absolute;
+
+  /* border: 1px solid red; */
+}
+
+/* 텍스트 입력박스*/
+input {
+  margin-top: 445px;
+  height: 60px;
+  /* border: 1px solid red; */
+
+  font-size: 18px;
+}
+/* 텍스트 입력박스 커서위치*/
+#input {
+  width: 250px;
+  margin-left: 20px;
+  border: none;
+  /* background: transparent; */
+}
+#input:focus {
+  outline: none;
+}
+/* 텍스트 입력박스 버튼 */
+#send {
+  width: 60px;
+  margin-left: 5px;
+  opacity: 0;
+}
+
+#topbox {
+  width: 100%;
+  height: 430px;
+  overflow-y: auto;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  position: absolute;
+
+  /* border: 1px solid red; */
+}
+
+/* 텍스트 입력하면 출력되는 박스 */
+#box {
+  position: absolute;
+  right: 0;
+  font-family: "twayair";
+  margin-right: 10px;
+
+  text-align: right;
+
+  /* border: 1px solid red; */
+}
+.cha_outbox td {
+  padding: 15px 15px 10px 15px;
+  /* border: 1px solid red; */
+  border-radius: 40px;
+  background: #fff;
+  border: 10px solid #dee8db;
+}
+
+.cha_outbox tr {
+}

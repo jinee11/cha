@@ -1,0 +1,75 @@
+@import url(reset.css);
+
+div {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+}
+
+div {
+  border: 1px solid black;
+}
+
+.chatting_outbox {
+  width: 360px;
+  height: 490px;
+  margin-top: 90px;
+
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 18px;
+  color: #000000;
+
+  position: absolute;
+  top: 0;
+
+  border: 1px solid red;
+}
+
+/* 채팅 보이는창 */
+.chat {
+  width: 100%;
+  height: 435px;
+  overflow-y: auto;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  border: 1px solid red;
+}
+
+/* 채팅 글자치는 박스 */
+.input {
+  width: 100%;
+  height: 60px;
+  opacity: 1;
+  border: none;
+}
+#msg {
+  border: none;
+  background: transparent;
+}
+#msg:focus {
+  outline: none;
+}
+
+/* 글자입력하면 올라가는 박스 */
+.msg_div {
+  float: left;
+  width: 80%;
+  height: 100%;
+  padding: 10px;
+}
+
+/* 글자입력박스커서위치 */
+#msg {
+  width: 100%;
+  height: 100%;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 18px;
+}
+
+/* 글자입력버튼 */
+.send_div {
+  float: left;
+  width: 20%;
+  height: 100%;
+  opacity: 0;
+}

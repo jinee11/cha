@@ -1,0 +1,108 @@
+@import url(reset.css);
+
+body {
+}
+
+.footer_outbox {
+  display: grid;
+  background-color: #abd2a1;
+
+  /* width */
+  grid-template-columns: 1fr;
+  /* height: 50vh; */
+  grid-template-rows: 230px 30px 70px 60px;
+  grid-template-areas:
+    "footer_cha"
+    "footer_f1"
+    "footer_email"
+    "footer_line";
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.footer_outbox > div {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  /* 레이아웃 나눈거 확인 */
+  /* background-color: skyblue; */
+  /* border: 1px solid #000; */
+}
+
+.footer_cha {
+  grid-area: footer_cha;
+}
+.footer_f1 {
+  grid-area: footer_f1;
+}
+.footer_email {
+  grid-area: footer_email;
+}
+.footer_line {
+  grid-area: footer_line;
+}
+
+/* 상호명 */
+.footer_cha > div {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: center;
+
+  background-color: #abd2a1;
+  color: #ffffff;
+}
+
+/* 아이콘 페북 인스타 */
+.footer_f1 > div {
+  width: 860px;
+  display: flex;
+  justify-content: end;
+}
+.footer_f1 > div > img {
+  cursor: pointer;
+}
+
+/* 이메일 구독 */
+.footer_email > div {
+  width: 920px;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.footer_email > div > input {
+  width: 700px;
+  height: 40px;
+  font-size: 20px;
+  margin: 0 5px 0 5px;
+  font-family: PlayfairDisplay-Italic-VariableFont_wght;
+  border: none;
+}
+
+.footer_email > div > input::placeholder {
+  color: #8cb082;
+}
+
+.footer_email > div > button {
+  width: 165px;
+  height: 45px;
+  font-size: 20px;
+  font-family: PlayfairDisplay-Italic-VariableFont_wght;
+  margin: 0 5px 0 5px;
+  border: none;
+  background-color: #8cb082;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* 라인 */
+.footer_line {
+  border-top: 3px solid #fff;
+  font-size: 16px;
+  color: #ffffff;
+  font-family: PlayfairDisplay-Italic-VariableFont_wght;
+}
