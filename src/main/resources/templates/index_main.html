@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="ko">
+<html layout:decorate="~{layout}">
+<!-- [외부 css 스타일 지정] -->
+<link th:href="@{/css/kwon.css}" rel="stylesheet">
+\
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link rel="stylesheet" type="text/css" href="../static/css/index_main.css">
-
-   <!-- 메인 이미지 페이드인아웃 -->
+<!-- 메인 이미지 페이드인아웃, 타임리프 레이아웃 스크립트 추가 -->
+<th:block layout:fragment="script">
    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
    <script>
       $(document).ready(function () {
@@ -86,23 +82,22 @@
       });
 
    </script>
+</th:block>
 
+<div layout:fragment="content">
 
-</head>
-
-<body>
    <div class="in_main_out">
 
       <div class="in_main_bigimg">
          <div class="slide">
             <div class="slideImg">
-               <img src="../static/img/main_big1.jpg" style="object-fit: cover">
+               <img src="/img/main_big1.jpg" style="object-fit: cover">
             </div>
             <div class="slideImg">
-               <img src="../static/img/main_big2.jpg">
+               <img src="/img/main_big2.jpg">
             </div>
             <div class="slideImg">
-               <img src="../static/img/main_big3.jpg">
+               <img src="/img/main_big3.jpg">
             </div>
          </div>
       </div>
@@ -129,36 +124,36 @@
       <!-- 중간이미지 3개 -->
       <div class="in_main_3_img">
          <div class="cd1">
-            <img id="back" src="../static/img/icon_left.png" alt="">
+            <img id="back" src="/img/icon_left.png" alt="">
             <ul>
-               <li><img src="../static/img/main_smal_1.png"></li>
-               <li><img src="../static/img/main_smal_2.png"></li>
+               <li><img src="/img/main_smal_1.png"></li>
+               <li><img src="/img/main_smal_2.png"></li>
             </ul>
-            <img id="next" src="../static/img/icon_right.png" alt="">
+            <img id="next" src="/img/icon_right.png" alt="">
          </div>
       </div>
 
       <div class="in_main_logo">
          <div>
-            <img src="../static/img/header_logo.png">
+            <img src="/img/header_logo.png">
          </div>
       </div>
 
       <!-- 맨마지막 슬라이드 -->
       <div class="in_main_smalimg">
          <div class="cd2">
-            <img class="cd2_img" src="../static/img/main_big_bottom1.jpg">
+            <img class="cd2_img" src="/img/main_big_bottom1.jpg">
          </div>
          <div class="cd2">
-            <img class="cd2_img" src="../static/img/main_big_bottom2.jpg">
+            <img class="cd2_img" src="/img/main_big_bottom2.jpg">
          </div>
          <div class="cd2">
-            <img class="cd2_img" src="../static/img/main_big_bottom3.jpg">
+            <img class="cd2_img" src="/img/main_big_bottom3.jpg">
          </div>
 
       </div>
 
-</body>
+   </div>
 
 
 

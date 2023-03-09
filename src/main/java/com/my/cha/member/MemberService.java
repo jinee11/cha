@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 @Service
 public class MemberService {
 	
-	private final MemberRepository MemberRepository;
+	private final MemberRepository memberRepository;
 	
 	public Member create(String email, String pass, String name, String phone) {
 		
@@ -18,7 +18,7 @@ public class MemberService {
 		member.setPhone(phone);
 		member.setPass(pass);
 		
-		this.MemberRepository.save(member);
+		this.memberRepository.save(member);
 		
 		return member;
 		

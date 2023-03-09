@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko"
+	  xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link rel="stylesheet" type="text/css" href="../static/css/header.css">
-   <link
-      href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Cute+Font&family=Do+Hyeon&family=Dokdo&family=East+Sea+Dokdo&family=Gaegu&family=Gamja+Flower&family=Gothic+A1&family=Gugi&family=Hi+Melody&family=Jua&family=Kirang+Haerang&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR&family=Noto+Serif+KR&family=Poor+Story&family=Single+Day&family=Song+Myung&family=Stylish&family=Sunflower:wght@300&family=Yeon+Sung&display=swap"
-      rel="stylesheet">
 
+<!-- [외부 css 스타일 지정] -->
+<link th:href="@{/css/header.css}" rel="stylesheet">
+   
+  
+
+<th:block layout:fragment="script">
    <!-- 어사이드 인클루드 -->
    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
    <script type="text/javascript">
@@ -71,102 +70,100 @@
       });
    </script>
 
+</th:block>
 
 
-</head>
 
-<body>
-   <!-- 헤더 -->
-   <div class="header_outbox">
-      <div id="header_join">
-         <ul>
-            <li class="login_icon">LOGIN</li>
-            <!-- 회원가입 -->
-            <li class="join_icon">JOIN</li>
-            <li><img src="../static/img/cart.png" width="25px"></li>
-         </ul>
-      </div>
-
-      <div class="header_logo">
-
-         <div>
-            <div id="header_logo_logo">
-               <a href="index.html"><img src="../static/img/header_logo.png"></a>
-            </div>
-            <div class="header_logo_bottom">
-               <span>귀품의 색, 향, 미를 고귀한 분들께 전해드립니다.</span>
-            </div>
-         </div>
-
-      </div>
-      <div class="header_menu">
-         <div>
-            <!-- 왼쪽 어사이드 띄울 아이콘 -->
-            <img id="h_left_menu" class="pic" src="../static/img/header_left_menu.png">
-
+<div th:fragment="header">
+      <!-- 헤더 -->
+      <div class="header_outbox">
+         <div id="header_join">
             <ul>
-               <li class="h_menu_main1"><a href="index.html">차차</a></li>
-               <li class="h_menu_main1"><a href="sub1.html"> 잎차</a>
-                  <ul class="h_menu_sub1">
-                     <li><a href="sub1.html">녹차</a></li>
-                     <li>백차</li>
-                     <li>청차</li>
-                     <li>홍차</li>
-                     <li>흑차</li>
-                  </ul>
-               </li>
-               <li class="h_menu_main1">티백
-                  <ul class="h_menu_sub1">
-                     <li>뿌리차</li>
-                     <li>허브차</li>
-                     <li>과일차</li>
-                  </ul>
-               </li>
-               <li class="h_menu_main1">차도구
-                  <ul class="h_menu_sub1">
-                     <li>다기</li>
-                     <li>자사호</li>
-                  </ul>
-               </li>
-               <li class="h_menu_main1">eco friendly<img src="../static/img/header_menu_eco.png"> </li>
+               <li class="login_icon">LOGIN</li>
+               <!-- 회원가입 -->
+               <li class="join_icon">JOIN</li>
+               <li><img src="/img/cart.png" width="25px"></li>
             </ul>
          </div>
 
+         <div class="header_logo">
 
-         <!-- 인클루드 조인 -->
-         <div id="join_bg">
-            <div id="join"> </div>
-            <!-- 조인창 닫는 버튼   -->
-            <div id="join_close"></div>
+            <div>
+               <div id="header_logo_logo">
+                  <a href="index.html"><img src="/img/header_logo.png"></a>
+               </div>
+               <div class="header_logo_bottom">
+                  <span>귀품의 색, 향, 미를 고귀한 분들께 전해드립니다.</span>
+               </div>
+            </div>
+
+         </div>
+         <div class="header_menu">
+            <div>
+               <!-- 왼쪽 어사이드 띄울 아이콘 -->
+               <img id="h_left_menu" class="pic" src="/img/header_left_menu.png">
+
+               <ul>
+                  <li class="h_menu_main1"><a href="index.html">차차</a></li>
+                  <li class="h_menu_main1"><a href="sub1.html"> 잎차</a>
+                     <ul class="h_menu_sub1">
+                        <li><a href="sub1.html">녹차</a></li>
+                        <li>백차</li>
+                        <li>청차</li>
+                        <li>홍차</li>
+                        <li>흑차</li>
+                     </ul>
+                  </li>
+                  <li class="h_menu_main1">티백
+                     <ul class="h_menu_sub1">
+                        <li>뿌리차</li>
+                        <li>허브차</li>
+                        <li>과일차</li>
+                     </ul>
+                  </li>
+                  <li class="h_menu_main1">차도구
+                     <ul class="h_menu_sub1">
+                        <li>다기</li>
+                        <li>자사호</li>
+                     </ul>
+                  </li>
+                  <li class="h_menu_main1">eco friendly<img src="/img/header_menu_eco.png"> </li>
+               </ul>
+            </div>
+
+
+            <!-- 인클루드 조인 -->
+            <div id="join_bg">
+               <div id="join"> </div>
+               <!-- 조인창 닫는 버튼   -->
+               <div id="join_close"></div>
+            </div>
+
+            <!-- 인클루드 로그인 -->
+            <div id="login_bg">
+               <div id="login"></div>
+               <!-- 로그인 닫는 버튼 -->
+               <div id="login_close"></div>
+            </div>
+
+            <!-- 채팅창 띄울 아이콘 -->
+            <img class="h_bottom_menu" src="/img/bottom_icon.png">
+
+         </div>
+         <!-- 인클루드 어사이드메뉴 -->
+         <div id="lightbox" class="lightbox2">
+            <div id="aside"></div>
+
          </div>
 
-         <!-- 인클루드 로그인 -->
-         <div id="login_bg">
-            <div id="login"></div>
-            <!-- 로그인 닫는 버튼 -->
-            <div id="login_close"></div>
-         </div>
-
-         <!-- 채팅창 띄울 아이콘 -->
-         <img class="h_bottom_menu" src="../static/img/bottom_icon.png">
+         <!-- 인클루드 채팅창 -->
+         <div id="chatting"></div>
+         <!-- 채팅창 닫는 버튼 -->
+         <div id="chatting_close"></div>
 
       </div>
-      <!-- 인클루드 어사이드메뉴 -->
-      <div id="lightbox" class="lightbox2">
-         <div id="aside"></div>
-
-      </div>
-
-      <!-- 인클루드 채팅창 -->
-      <div id="chatting"></div>
-      <!-- 채팅창 닫는 버튼 -->
-      <div id="chatting_close"></div>
-
-
-
    </div>
 
 
-</body>
 
 </html>
