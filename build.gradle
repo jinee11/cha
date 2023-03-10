@@ -27,8 +27,8 @@ dependencies {
 		
 		
 		//spring security 라이브러리
-		//implementation 'org.springframework.boot:spring-boot-starter-security'
-		//testImplementation 'org.springframework.security:spring-security-test'
+		implementation 'org.springframework.boot:spring-boot-starter-security'
+		testImplementation 'org.springframework.security:spring-security-test'
 		
 		//spring start web : mvc 모델로 개발시 필요한 라이브러리
 		implementation 'org.springframework.boot:spring-boot-starter-web'

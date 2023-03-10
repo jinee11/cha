@@ -1,0 +1,26 @@
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+.header_a {
+  z-index: 3;
+  
+}
+
+
+.main_a {
+  z-index: 0;
+}
+
+.footer_a {
+  z-index: 1;
+}
+
+body {
+	font-family: "Nanum Myeongjo", serif;
+}

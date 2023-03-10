@@ -1,27 +1,25 @@
 package com.my.cha.member;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import lombok.RequiredArgsConstructor;
-
-@RequiredArgsConstructor
 @Service
 public class MemberService {
-	
-	private final MemberRepository memberRepository;
-	
-	public Member create(String email, String pass, String name, String phone) {
-		
-		Member member = new Member();
-		member.setEmail(email);
-		member.setName(name);
-		member.setPhone(phone);
-		member.setPass(pass);
-		
-		this.memberRepository.save(member);
-		
-		return member;
-		
-	}
 
+    @Autowired
+    private MemberRepository memberRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    public void registerNewMember(MemberForm memberForm) {
+        Member member = new Member();
+        member.setEmail(memberForm.getEmail());
+        member.setName(memberForm.getName());
+        member.setPhone(memberForm.getPhone());
+        member.setPass(passwordEncoder.encode(memberForm.getPass1()));
+
+        memberRepository.save(member);
+    }
 }

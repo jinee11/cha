@@ -1,5 +1,6 @@
 @import url(reset.css);
 
+
 .sub_main_outbox {
   display: grid;
   grid-template-areas: "sub_main_x1 sub_main sub_main_x2";

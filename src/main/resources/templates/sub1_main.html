@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link rel="stylesheet" type="text/css" href="/css/sub1_main.css">
-   <link
+
+<div layout:fragment="content">
+<!-- [외부 css 스타일 지정] -->
+<link th:href="@{/css/sub1_main.css}" rel="stylesheet">
+  <link
       href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Cute+Font&family=Do+Hyeon&family=Dokdo&family=East+Sea+Dokdo&family=Gaegu&family=Gamja+Flower&family=Gothic+A1&family=Gugi&family=Hi+Melody&family=Jua&family=Kirang+Haerang&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR&family=Noto+Serif+KR&family=Poor+Story&family=Single+Day&family=Song+Myung&family=Stylish&family=Sunflower:wght@300&family=Yeon+Sung&display=swap"
       rel="stylesheet">
-</head>
 
-<body>
    <div class="sub_main_outbox">
       <!-- 공란1 -->
       <div class="sub_main_x1"></div>
@@ -39,7 +37,7 @@
             <tr>
 
                <td height="300px" align="right">
-                  <div class="sub_m_hover"><a href="sub2.html">
+                  <div class="sub_m_hover"><a th:href="@{/cha/item}">
                         <img class="sub_m_hover_b" src="/img/sub1_m_hover_on.jpg">
                         <img class="sub_m_hover_a" src="/img/sub1_m1_hover.jpg">
                      </a>
@@ -65,9 +63,9 @@
             <tr>
                <td>
                   <ul class="bottom_ment">
-                     <li class="bottom_ment_a"><a href="sub2.html">하동녹차 50g</a> </li>
-                     <li class="bottom_ment_b"><a href="sub2.html">20,000원</a></li>
-                     <li class="bottom_ment_c"><a href="sub2.html">한국 녹차(하동, 보성)</a></li>
+                     <li class="bottom_ment_a"><a th:href="@{/cha/item}">하동녹차 50g</a> </li>
+                     <li class="bottom_ment_b"><a th:href="@{/cha/item}">20,000원</a></li>
+                     <li class="bottom_ment_c"><a th:href="@{/cha/item}">한국 녹차(하동, 보성)</a></li>
                   </ul>
                </td>
                <td>
@@ -92,7 +90,7 @@
       <!-- 공란2 -->
       <div class="sub_main_x2"></div>
    </div>
+</div>
 
-</body>
 
 </html>

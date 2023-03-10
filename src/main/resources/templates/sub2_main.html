@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link rel="stylesheet" type="text/css" href="/css/sub2_main.css">
+
+<div layout:fragment="content">
+<!-- [외부 css 스타일 지정] -->
+<link th:href="@{/css/sub2_main.css}" rel="stylesheet">
    <link
       href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Cute+Font&family=Do+Hyeon&family=Dokdo&family=East+Sea+Dokdo&family=Gaegu&family=Gamja+Flower&family=Gothic+A1&family=Gugi&family=Hi+Melody&family=Jua&family=Kirang+Haerang&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR&family=Noto+Serif+KR&family=Poor+Story&family=Single+Day&family=Song+Myung&family=Stylish&family=Sunflower:wght@300&family=Yeon+Sung&display=swap"
       rel="stylesheet">
-</head>
 
-<body>
+
    <div class="sub2_main_outbox">
       <!-- 공란1 -->
       <div class="sub2_main_x1"></div>
@@ -110,6 +109,6 @@
       <div class="sub2_main_x2"></div>
    </div>
 
-</body>
+</div>
 
 </html>

@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="ko"  xmlns:th="http://www.thymeleaf.org">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <link rel="stylesheet" type="text/css" href="/css/join.css">
-
 </head>
-
 <body>
 
    <img src="/img/join_menu.jpg" class="join_out_box">
@@ -19,17 +16,10 @@
       <img src="/img/join_naver.jpg" class="join_in_box">
       <img src="/img/join_kakao.jpg" class="join_in_box">
       <img src="/img/join_google.jpg" class="join_in_box">
-      <a href="join_box.html" onClick="window.open(this.href, '', 'width=380, height=670'); return false;"
-         th:href="@{/member/join}">
+      <a th:href="@{/member/join}" onClick="window.open(this.href, '', 'width=380, height=670'); return false;">
          <img src="/img/join_id_pw.jpg" class="join_in_box1">
       </a>
    </div>
-
-
-
-
-
-
 </body>
 
 </html>

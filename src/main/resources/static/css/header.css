@@ -6,6 +6,7 @@
   background-color: #fff;
   color: #3b5835;
   display: grid;
+  
 
   /* width */
   grid-template-columns: 1fr;
@@ -88,7 +89,7 @@ div {
   top: 170px;
   left: 10px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 88;
   position: fixed;
   opacity: 0.6;
 }
@@ -104,7 +105,7 @@ div {
 
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 2;
+  z-index: 99;
 
   display: none;
 }
@@ -138,7 +139,7 @@ div {
   /* border: 1px solid rebeccapurple; */
 
   font-weight: 500;
-  margin: 10px 0 0 -20px;
+  margin: 0px 0px 0px -20px;
 
   width: 140px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
@@ -147,6 +148,8 @@ div {
 /* 마우스 오버시 서브메뉴 보임 */
 .h_menu_main1:hover ul.h_menu_sub1 {
   display: block;
+  top: 30px;
+  z-index: 99;
 }
 
 .h_menu_sub1 li {
@@ -173,7 +176,7 @@ div {
 
 .h_bottom_menu {
   cursor: pointer;
-  z-index: 1;
+  z-index: 88;
   /* border: 1px solid red; */
   margin: 13px;
   position: fixed;
@@ -187,7 +190,7 @@ div {
   bottom: 0;
   right: 0;
   margin: 10px;
-  z-index: 2;
+  z-index: 98;
   display: none;
 }
 
@@ -202,7 +205,7 @@ div {
   right: 0;
   margin-bottom: 560px;
   margin-right: 25px;
-  z-index: 3;
+  z-index: 99;
   cursor: pointer;
 }
 
@@ -296,4 +299,14 @@ div {
   margin: auto;
   z-index: 4;
   cursor: pointer;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+	
 }

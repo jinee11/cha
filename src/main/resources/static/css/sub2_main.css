@@ -4,7 +4,7 @@
   display: grid;
   grid-template-areas: "sub2_main_x1 sub2_main sub2_main_x2";
   grid-template-columns: 1fr 980px 1fr;
-  grid-template-rows: 580px;
+  grid-template-rows: 610px;
 
   background-image: url("../img/sub2_main_back.jpg");
   background-size: cover;
@@ -28,7 +28,7 @@
   grid-area: sub2_main;
   position: relative;
   z-index: 1;
-  height: 620px;
+  height: 626px;
 }
 .sub2_main:after {
   background-color: #fff;
@@ -62,7 +62,7 @@ div {
 .sub2_m_1 {
 }
 .sub2_m_1 > img {
-  margin-top: -10px;
+  margin-top: 0px;
 }
 
 .sub2_m_2 {
