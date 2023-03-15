@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko"  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <style>
+      @font-face {
+         font-family: "twayair";
+         src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff") format("woff");
+         font-weight: normal;
+         font-style: normal;
+      }
+
+      .ok {
+
+         font-family: "twayair";
+         font-size: 20px;
+
+         width: 380px;
+         height: 670px;
+
+
+         margin-left: 60px;
+         line-height: 335px;
+
+
+
+      }
+   </style>
+
+   <script language="javascript">
+      var wintimer;
+      clearTimeout(wintimer);
+      wintimer = setTimeout("closewin()", 2000);  //천분의 1초 단위로 초를 지정합니다..
+
+      function closewin() {
+         window.close();
+      }
+      window.onload = showWindow;
+   </script>
+</head>
+
+
+<body>
+
+   <div class="ok">
+      회원가입이 완료되었습니다.
+   </div>
+
+</body>
+
+</html>

@@ -21,7 +21,7 @@ import lombok.RequiredArgsConstructor;
 public class MemberController {
 
     
-    private MemberService memberService;
+    private final MemberService memberService;
     private final PasswordEncoder passwordEncoder;
 
     @GetMapping("/member/join")
@@ -44,12 +44,13 @@ public class MemberController {
     		return "join_box";
     	}
     	
-    	return "redirect:/";
+    	memberService.registerNewMember(memberForm);
+    	
+    	return "redirect:/join/ok";
     }
     
     @GetMapping("/login")
 	public String login() {
-		
 		return "login";
 	}
     

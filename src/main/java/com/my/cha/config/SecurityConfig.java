@@ -20,10 +20,12 @@ import com.my.cha.member.MemberService;
 @EnableMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 	
+	
+	
    
    @Bean
    SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
-      
+	   //http.csrf().disable();
       http.authorizeHttpRequests().requestMatchers(new AntPathRequestMatcher("/**")).permitAll()
       
       .and()
@@ -43,7 +45,9 @@ public class SecurityConfig {
          .invalidateHttpSession(true)
          ;
       
-//      http.csrf().disable();
+      //로그인시 403에러 발생해서 추가/이거 추가하면 회원가입이 안됨/해결
+      http.csrf().disable();
+      
       
    return http.build();
    

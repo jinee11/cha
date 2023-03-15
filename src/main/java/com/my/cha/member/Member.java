@@ -20,16 +20,16 @@ public class Member {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(unique = true, length =50)
+	@Column(unique = true)
 	private String email;
 	
-	@Column(length =30)
+	@Column
 	private String pass;
 	
-	@Column(length =200)
+	@Column
 	private String name;
 	
-	@Column(length =30)
+	@Column
 	private String phone;
 
 }

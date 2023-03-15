@@ -53,5 +53,11 @@ public class MainController {
 		return "join";
 	}
 	
+	@GetMapping("/join/ok")
+	public String joinOk() {
+		
+		return "join_ok";
+	}
+	
 	
 }

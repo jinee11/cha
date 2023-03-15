@@ -78,7 +78,8 @@
       <div class="header_outbox">
          <div id="header_join">
             <ul>
-               <li class="login_icon">LOGIN</li>
+               <li class="login_icon" sec:authorize="isAnonymous()" >LOGIN</li>
+               <li sec:authorize="isAuthenticated()" th:href="@{/logout}">LOGOUT</a>
                <!-- 회원가입 -->
                <li class="join_icon">JOIN</li>
                <li><img src="/img/cart.png" width="25px"></li>
