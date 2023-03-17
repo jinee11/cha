@@ -28,57 +28,6 @@
 
             var msg = $("#input").val();
             
-            //ajax 2023.03.15
-             $.ajax({
-		      type: "POST",
-		      url: "/chatting",
-		      data: { message: msg },
-		      success: function(data) {
-		        // 서버의 성공 응답 처리
-		        console.log(data);
-		      },
-		      error: function(xhr, status, error) {
-		        // 서버의 오류 응답 처리
-		        console.error(error);
-		      }
-		    });
-	             var tr = $("<tr></tr");
-	             tr.append("<td>" + msg);
-	             $("#box").append(tr);
-	             $("#input").val("");
-	
-	             updateScroll();
-	           });
-         $("#input").on("keyup", function(e) {
-        	    if (e.keyCode == 13) {
-        	      var msg = $("#input").val();
-
-        	      $.ajax({
-        	        type: "POST",
-        	        url: "/chatting",
-        	        data: { message: msg },
-        	        success: function(data) {
-        	          // 서버의 성공 응답 처리
-        	          console.log(data);
-        	        },
-        	        error: function(xhr, status, error) {
-        	          // 서버의 오류 응답 처리
-        	          console.error(error);
-        	        }
-        	      });
-
-        	      var tr = $("<tr></tr");
-        	      tr.append("<td>" + msg);
-        	      $("#box").append(tr);
-        	      $("#input").val("");
-
-        	      updateScroll();
-        	    }
-        	  });
-        	});
-	         
-         
-			/*
             var tr = $("<tr></tr>");
             tr.append("<td>" + msg);
             $("#box").append(tr);
@@ -104,8 +53,7 @@
          })
 
       })
-      
-      */
+
    </script>
 
 </head>

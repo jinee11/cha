@@ -44,7 +44,7 @@ dependencies {
 		testImplementation 'org.springframework.boot:spring-boot-starter-test'
 		
 		//H2 라이브러리 
-		runtimeOnly 'com.h2database:h2' // 실행시에만 작동, 테스트 환경
+	//	runtimeOnly 'com.h2database:h2' // 실행시에만 작동, 테스트 환경
 		
 		
 		//마크다운 라이브러리 설치 (2월 17일) : 타임리프에서 마크다운 사용 : github readme.md
@@ -72,7 +72,10 @@ dependencies {
 		implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.3.9'
 		
 		//MySQL 드라이버 설치
-		//implementation 'com.mysql:mysql-connector-j'
+		implementation 'com.mysql:mysql-connector-j'
+		
+		//asw 드라이버
+		implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
 }
 
 tasks.named('test') {

@@ -28,9 +28,9 @@ public class SecurityConfig {
 	   //http.csrf().disable();
       http.authorizeHttpRequests().requestMatchers(new AntPathRequestMatcher("/**")).permitAll()
       
-      .and()
-         .csrf()
-         .ignoringRequestMatchers(new AntPathRequestMatcher("/h2-console/**"))
+//      .and()
+//         .csrf()
+//         .ignoringRequestMatchers(new AntPathRequestMatcher("/h2-console/**"))
       .and()
          .headers()
          .addHeaderWriter(new XFrameOptionsHeaderWriter(XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN))
